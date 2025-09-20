@@ -1,0 +1,67 @@
+:root{
+  --brand:#4055b2;
+  --brand-dark:#33469a;
+  --sidebar-bg:#4b5fc0;
+}
+
+html,body{height:100%;}
+body{background:#f5f7fb;}
+
+.topbar{height:56px;background:#fff;border-bottom:1px solid #e6e9f2;color:#1f2a44;} 
+.topbar .logo{height:36px;}
+.topbar a, .topbar i, .topbar span{color:#1f2a44;}
+
+.app{min-height:calc(100vh - 56px);} 
+
+.sidebar{width:260px;background:var(--sidebar-bg);color:#fff;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;}
+.sidebar .avatar{width:36px;height:36px;border-radius:50%;}
+.sidebar .nav-link{color:#e6e9ff;padding:.65rem 1rem;display:flex;align-items:center;gap:.6rem;}
+.sidebar .nav-link.active,.sidebar .nav-link:hover{background:rgba(255,255,255,.15);color:#fff;}
+.sidebar .quick-links{border-top:1px solid rgba(255,255,255,.15);} 
+
+.content{background:#fff;}
+
+/* Cards */
+.stat-card{border:1px solid #e8ecf5;border-radius:12px;padding:16px;background:#fff;}
+.stat-value{font-size:1.25rem;font-weight:700;}
+.badge-status{font-weight:600;}
+
+/* Results table */
+.results-table th,.results-table td{vertical-align:middle;padding:.75rem .5rem;border:1px solid #dee2e6;}
+.results-table th{background:#f8f9fa;font-weight:600;color:#495057;}
+.results-table tbody tr:nth-child(odd){background:#f8f9fa;}
+.results-table tbody tr:nth-child(even){background:#fff;}
+.decision-pass{color:#17a345;}
+.decision-fail{color:#d9534f;}
+.decision-pill{display:inline-block;border-radius:3px;padding:.25rem .5rem;font-weight:700;font-size:.75rem;line-height:1;min-width:20px;text-align:center;}
+.decision-pill.pass{background:#28a745;color:#fff;}
+.decision-pill.fail{background:#dc3545;color:#fff;}
+.level-header{background:#e9ecef;padding:.75rem 1rem;margin:0;font-weight:600;color:#495057;border:1px solid #dee2e6;border-bottom:none;}
+
+.results-header{background:#fff;border:1px solid #e1e5ef;border-radius:6px;}
+.results-header .title{font-size:1.6rem;font-weight:700;color:#1f2a44;}
+.results-header img{height:56px;}
+
+/* Fees */
+.overdue{background:#fde8e8;border:1px solid #f2b1b1;color:#b42318;}
+
+/* Dashboard mimic */
+.board-panel{border:1px solid #e1e5ef;border-radius:6px;background:#fff;}
+.board-panel .panel-header{padding:.75rem 1rem;border-bottom:1px solid #e1e5ef;background:#f8f9fc;font-weight:600;}
+.board-panel .panel-body{padding:1rem;}
+.soft-btn{border-radius:10px;padding:.2rem .6rem;font-size:.8rem;}
+.alert-registered{background:#e5f4e9;border:1px solid #bfe6cb;color:#106b2f;}
+.alert-fees{background:#f7d7da;border:1px solid #f1b5bb;color:#7d1d25;}
+.brand-strip{border:1px solid #e1e5ef;border-radius:6px;background:#fff;padding:.75rem 1rem;display:flex;gap:24px;align-items:center;justify-content:space-around;}
+.brand-strip img{height:44px;object-fit:contain;}
+.brand-strip img.phone{height:56px;}
+.mini-table th{width:160px;}
+.table-compact>tbody>tr>td,.table-compact>tbody>tr>th{padding:.55rem .75rem;}
+
+/* Responsive */
+@media (max-width: 992px){
+  .sidebar{position:fixed;left:-260px;z-index:1040;transition:left .2s ease;}
+  .sidebar.open{left:0;}
+}
+
+
